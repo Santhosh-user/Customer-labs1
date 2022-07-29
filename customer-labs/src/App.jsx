@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <div className='general'>
+    <div>
       <div className='header-color' >
       <div className='header-text'> View Audience</div>
       </div>
@@ -21,7 +21,6 @@ function App() {
     
 
       {segment && <Popup closePopup={closePopup} />}
-      
     </div>
   );
 
@@ -32,3 +31,4 @@ function App() {
 }
 
 export default App;
+
