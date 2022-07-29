@@ -87,7 +87,8 @@ const Popup = ({closePopup}) =>{
         <div className="box" >
             <div className="header-color">
             <div className="header-text" >Saving Segment</div>
-            </div>
+        </div>
+
             <div className="jst-txt" >Enter name of the segment</div> 
          
             <input placeholder="Name of the Segment" className="txt-input" onChange={(e)=>{setText(e.target.value)}} type="text" />
@@ -102,26 +103,19 @@ const Popup = ({closePopup}) =>{
 
                     <select defaultValue={true}>
                 
-                        <option value={e[0].value}>{e[0].label}</option>
+                        <option className="dropdown-section" value={e[0].value}>{e[0].label}</option>
 
                         <div>
-
                             {list.map((listi) => {
-                            
                                 return( 
-                                    
-                                    <option value = {listi.label} id={listi.value}>
+                                    <option className="dropdown-section" value = {listi.label} id={listi.value}>
                                     {listi.label}
                                 </option>
                                 )
-                                
-                            
                             }
-                            
                             )}
-
                         </div>
-                
+                 
                     </select>
 
                     </div>

@@ -90,10 +90,14 @@
 }
 
 .bottom{
-  margin-top: 380px;
+  /* margin-top: 370px; */
   background-color: 
   #f6f6f6;
   height: 60px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  
 }
 
 .btn2{
