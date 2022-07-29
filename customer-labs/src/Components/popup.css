@@ -1,0 +1,120 @@
+.popup-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+   
+  }
+  
+  .box {
+    position: relative;
+    width: 40%;
+    height: 800px;
+    left: 60%;
+    min-height: 300px;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 4px;
+    
+  
+    overflow: auto;
+  }
+  
+  .header-color{
+    height: 100px;
+    background-color: #39aebc;
+  }
+  
+  .header-text{
+    padding-top: 40px;
+    color: white;
+    padding-left: 80px;
+    font-size: 20px;
+  }
+  
+  .jst-txt{
+    padding-top: 30px;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+
+  .txt-input{
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 30px;
+  }
+
+  .jst-txt1{
+    padding-top: 30px;
+    padding-left: 20px;
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+
+ .dropdown-section{
+  
+  margin-left: 30px;
+  padding-bottom: 10px;
+ }
+
+
+ .dropdown-section select {
+  width: 300px;
+  height: 40px;
+ }
+
+ .btn1{
+  margin-left: 30px;
+ }
+
+
+ .dropdown-section2{
+ 
+  margin-left: 20px;
+ }
+
+
+ .dropdown-section2 select {
+  width: 300px;
+  height: 40px;
+ }
+
+.btn1 {
+  background-color: white;
+  border: white;
+  color: #54bda2;
+  padding-top: 20px;
+  margin: 0px;
+  margin-left: 20px;
+}
+
+.bottom{
+  margin-top: 380px;
+  background-color: 
+  #f6f6f6;
+  height: 60px;
+}
+
+.btn2{
+  height: 50px;
+  width: 150px;
+  margin-left: 40px;
+  background-color: #54bda2;
+  color: white;
+  border: 1px solid white ;
+  margin-top: 5px;
+  font-size: 15px;
+
+}
+
+.btn-close{
+  height: 50px;
+  width: 70px;
+  margin-left: 40px;
+  color: #d75b83;
+  font-size: 15px;
+  background-color: white;
+  border: 1px solid white ;
+  margin-top: 5px;
+}
