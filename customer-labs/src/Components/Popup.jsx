@@ -14,9 +14,6 @@ const Popup = ({closePopup}) =>{
     const [text,setText] = useState("")
     const [name,setName] = useState("")
 
-
-    //when button is clicked, new dropdown with selected value appears
-
     const sHandler =() =>{
 
         var checkCondition = dropList.filter(x=>{ 
@@ -38,6 +35,7 @@ const Popup = ({closePopup}) =>{
             element.value = "select"
             
             setName(text)
+            setTemp([])
         }
     }
 
@@ -47,7 +45,6 @@ const Popup = ({closePopup}) =>{
 
         var index = list.filter(x => x.label ===e.target.value)
         setTemp(index)
-        console.log(temp, "temp")
 
     }
 
@@ -97,6 +94,25 @@ const Popup = ({closePopup}) =>{
     
     }
 
+    var dropTemp;
+
+    const onDropdownChangeHandler= (e)=>{
+
+        dropTemp = dropList[e.target.id]
+
+        var index = list.filter(x => x.label !=e.target.value)
+        index.push(dropTemp[0])
+
+        var filteredLists = dropList.filter(x => x[0].label !=dropTemp[0].label)
+
+        filteredLists.splice(e.target.id, 0, list.filter(x => x.label ==e.target.value));
+       
+        setdropList(filteredLists)
+      
+        setList(index)
+
+    }
+
     return ( 
     
         <div className="popup-box">
@@ -133,17 +149,17 @@ const Popup = ({closePopup}) =>{
 
                             <div className="dropdown">
 
-                                <select defaultValue={true}>
+                                <select value={e[0].label} id={i} onChange={onDropdownChangeHandler}>
                             
-                                    <option className="dropdown" value={e[0].value}>{e[0].label}</option>
+                                    <option className="dropdown" value={e[0].label} >{e[0].label}</option>
 
-                                    <div>
+                                    {/* <div> */}
                                         {list.map((listi) => {
                                             return( 
                                                 <option className="dropdown" value = {listi.label} id={listi.value}> {listi.label} </option>
                                             )
                                         })}
-                                    </div>
+                                    {/* </div> */}
                             
                                 </select>
 
@@ -177,7 +193,7 @@ const Popup = ({closePopup}) =>{
 
                 <div className="bottom">
 
-                    <button className="save-segment-btn" onClick={handleSubmit}>Save the segment</button>
+                    <button className="save-segment" onClick={handleSubmit}>Save the segment</button>
                     <button onClick={()=>closePopup()} className="btn-close">Cancel</button>
 
                 </div>
